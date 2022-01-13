@@ -1,3 +1,5 @@
-.DS_Store
+# Ignore all .DS_Store files within the repo
+**/.DS_Store
 
+# Ignore the ui folder
 ui/

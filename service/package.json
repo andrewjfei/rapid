@@ -1,0 +1,21 @@
+{
+  "name": "rapid-service",
+  "version": "0.0.0",
+  "description": "A to-do list designed for on the go usage.",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint",
+    "test": "jest",
+    "start": "node src/index.js"
+  },
+  "author": "Andrew J Fei",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
