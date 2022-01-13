@@ -101,9 +101,9 @@ Before implementation of the application, ensure that everything is setup correc
 
 ### Examples
 
-- Docker
+- Docker (After Development)
 - GitHub VCS
-- GitHub Actions
+- GitHub Actions (After Development)
 - ESLint
 - Project Folder/File Structure
 - etc.
