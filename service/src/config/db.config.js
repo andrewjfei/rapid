@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
  * Connects to the MongoDB cluster
  */
 function connect() {
+  console.log(process.env.MONGO_DB_URI);
   mongoose.connect(process.env.MONGO_DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
