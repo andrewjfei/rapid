@@ -69,13 +69,13 @@ During this phase, any API endpoints and parameters can also be noted down to he
 "completeTaskList": [ ... ]
 ```
 
-| End Point              | Method | Description                                             |
-| ---------------------- | ------ | ------------------------------------------------------- |
-| /task/retrieveAllTasks | GET    | Retrieve both the incomplete and complete task lists.   |
-| /task/createTask       | POST   | Create a new a task with a name and due date.           |
-| /task/{id}/updateTask  | PUT    | Update a certain task in one of the task lists.         |
-| /task/{id}/deleteTask  | DELETE | Delete a certain task from one of the task lists.       |
-| /task/updateTaskList   | PUT    | Update an entire task list. (Used for reordering tasks) |
+| End Point             | Method | Description                                             |
+| --------------------- | ------ | ------------------------------------------------------- |
+| /task/fetchAllTasks   | GET    | Retrieve both the incomplete and complete task lists.   |
+| /task/addTask         | POST   | Create a new a task with a name and due date.           |
+| /task/{id}/modifyTask | PUT    | Update a certain task in one of the task lists.         |
+| /task/{id}/removeTask | DELETE | Delete a certain task from one of the task lists.       |
+| /task/modifyTaskList  | PUT    | Update an entire task list. (Used for reordering tasks) |
 
 ## UI/UX Design
 
