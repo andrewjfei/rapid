@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, Image, SafeAreaView } from 'react-native';
 
 import {
@@ -6,7 +6,7 @@ import {
   AddIcon,
   FloatingActionButton,
 } from '../../components/atoms';
-import { TaskOverview } from '../../components/molecules';
+import { TaskOverview, TaskModal } from '../../components/molecules';
 import { TaskList } from '../../components/organisims';
 import Logo from '../../../assets/rapid-logo.png';
 
@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
 });
 
 const MainScreen = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <View style={styles.container}>
       <SafeAreaView>
@@ -48,9 +49,12 @@ const MainScreen = () => {
         </View>
       </SafeAreaView>
       {/* <TaskListBackground /> */}
-      <FloatingActionButton>
+      <FloatingActionButton onPress={() => setIsModalOpen(true)}>
         <AddIcon iconColour={'#f2f4ff'} />
       </FloatingActionButton>
+      {isModalOpen ? (
+        <TaskModal onBackgroundPress={() => setIsModalOpen(false)} />
+      ) : null}
     </View>
   );
 };

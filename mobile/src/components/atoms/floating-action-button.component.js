@@ -17,15 +17,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const FloatingActionButton = ({ children }) => {
-  const onFloatingActionButtonPress = () => {
-    console.log('Floating Action Button Pressed.');
-  };
+const FloatingActionButton = ({ onPress, children }) => {
   return (
-    <Pressable
-      onPress={onFloatingActionButtonPress}
-      style={styles.floatingActionButtonPressable}
-    >
+    <Pressable onPress={onPress} style={styles.floatingActionButtonPressable}>
       <View style={styles.floatingActionButton}>{children}</View>
     </Pressable>
   );

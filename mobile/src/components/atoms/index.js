@@ -5,6 +5,7 @@ import ToggleButton from './toggle-button.component';
 import DragIconButton from './drag-icon-button.component';
 import AddIcon from './add-icon.component';
 import FloatingActionButton from './floating-action-button.component';
+import Modal from './modal.component';
 
 export {
   InfoCard,
@@ -14,4 +15,5 @@ export {
   DragIconButton,
   AddIcon,
   FloatingActionButton,
+  Modal,
 };
