@@ -1,22 +1,14 @@
 import { registerRootComponent } from 'expo';
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fbfbff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+import { store } from './store';
+import MainScreen from './screens/main';
 
 const App = () => (
-  <View style={styles.container}>
-    <Text>React Native Initial Starting Project!</Text>
-    <StatusBar style='auto' />
-  </View>
+  <Provider store={store}>
+    <MainScreen />
+  </Provider>
 );
 
 export default registerRootComponent(App);
