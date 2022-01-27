@@ -16,9 +16,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const TaskOverview = ({ backgroundColor }) => {
+const TaskOverview = ({ style }) => {
   return (
-    <View style={styles.taskOverviewContainer}>
+    <View style={[styles.taskOverviewContainer, style]}>
       <SectionTitle text={'Overview'} />
       <View style={styles.infoCardContainer}>
         <InfoCard

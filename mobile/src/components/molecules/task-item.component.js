@@ -29,9 +29,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const TaskItem = ({ name, completeBy, isComplete, isOverdue }) => {
+const TaskItem = ({ style, name, completeBy, isComplete, isOverdue }) => {
   return (
-    <View style={styles.taskItemContainer}>
+    <View style={[styles.taskItemContainer, style]}>
       <View style={styles.taskItemLeftContainer}>
         <ToggleButton />
         <View style={styles.taskInfoContainer}>

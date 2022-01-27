@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Pressable } from 'react-native';
 
-import { DragIcon } from '.';
+import DragIcon from './drag-icon.component';
 
 const DragIconButton = () => {
   const [isPressed, setIsPressed] = useState(false);

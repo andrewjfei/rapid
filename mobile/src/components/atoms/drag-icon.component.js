@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 const styles = StyleSheet.create({
-  taskListBackground: {},
+  dragIconContainer: {},
   dragIconCircle: {
     height: 7,
     width: 7,
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 
 const DragIcon = ({ iconColour }) => {
   return (
-    <View style={styles.taskListBackground}>
+    <View style={styles.dragIconContainer}>
       <View style={[styles.dragIconCircle, { backgroundColor: iconColour }]} />
       <View style={[styles.dragIconCircle, { backgroundColor: iconColour }]} />
       <View style={[styles.dragIconCircle, { backgroundColor: iconColour }]} />

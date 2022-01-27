@@ -1,7 +1,11 @@
 import React from 'react';
 import { StyleSheet, View, Image, SafeAreaView } from 'react-native';
 
-import { TaskListBackground } from '../../components/atoms';
+import {
+  TaskListBackground,
+  AddIcon,
+  FloatingActionButton,
+} from '../../components/atoms';
 import { TaskOverview } from '../../components/molecules';
 import { TaskList } from '../../components/organisims';
 import Logo from '../../../assets/rapid-logo.png';
@@ -39,11 +43,14 @@ const MainScreen = () => {
           <View style={styles.logoContainer}>
             <Image source={Logo} style={styles.logo} />
           </View>
-          <TaskOverview />
+          <TaskOverview style={{ marginBottom: 30 }} />
           <TaskList />
         </View>
       </SafeAreaView>
       {/* <TaskListBackground /> */}
+      <FloatingActionButton>
+        <AddIcon iconColour={'#f2f4ff'} />
+      </FloatingActionButton>
     </View>
   );
 };

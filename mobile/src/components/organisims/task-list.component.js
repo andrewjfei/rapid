@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
 
+import { SectionTitle } from '../atoms';
 import { TaskItem } from '../molecules';
 
 const styles = StyleSheet.create({
-  taskListContainer: {
-    zIndex: 99,
-  },
+  taskListContainer: {},
+  taskList: {},
 });
 
 const DATA = [
@@ -31,11 +31,47 @@ const DATA = [
     isComplete: false,
     isOverdue: false,
   },
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28bd',
+    name: 'Task 4',
+    completeBy: new Date(2022, 0, 13),
+    isComplete: false,
+    isOverdue: false,
+  },
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28be',
+    name: 'Task 5',
+    completeBy: new Date(2022, 0, 13),
+    isComplete: false,
+    isOverdue: false,
+  },
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28bf',
+    name: 'Task 6',
+    completeBy: new Date(2022, 0, 13),
+    isComplete: false,
+    isOverdue: false,
+  },
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28bg',
+    name: 'Task 7',
+    completeBy: new Date(2022, 0, 13),
+    isComplete: false,
+    isOverdue: false,
+  },
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28bh',
+    name: 'Task 8',
+    completeBy: new Date(2022, 0, 13),
+    isComplete: false,
+    isOverdue: false,
+  },
 ];
 
 const TaskList = () => {
   const renderItem = ({ item }) => (
     <TaskItem
+      style={{ marginVertical: 5 }}
       name={item.name}
       completeBy={'12 Janurary 2022'}
       isComplete={item.isComplete}
@@ -44,12 +80,15 @@ const TaskList = () => {
   );
 
   return (
-    <View style={styles.taskListContainer}>
-      <FlatList
-        data={DATA}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-      />
+    <View style={styles.taskOverviewContainer}>
+      <SectionTitle text={'Tasks'} />
+      <View style={styles.taskList}>
+        <FlatList
+          data={DATA}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
     </View>
   );
 };
